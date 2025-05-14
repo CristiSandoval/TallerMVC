@@ -18,13 +18,13 @@ class DishController {
         $this->categoryModel = new Category($db);
     }
 
-    // Mostrar el formulario de creación
+
     public function create() {
         $categories = $this->categoryModel->getAll();
         require_once 'views/dishes/create.php';
     }
 
-    // Procesar el formulario de creación
+
     public function store() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
