@@ -1,35 +1,38 @@
 <?php
 namespace App\models\drivers;
 
-use mysqli;
+use PDO;
+use PDOException;
 
 class ConexDB {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $password = '';
-    private $dataBase = 'proyecto_2_db';
+    private $host = "localhost";
+    private $database = "proyecto_2_db";
+    private $username = "root";
+    private $password = "";
+    private $conn;
 
-    private $conex = null;
-
-    public function __construct(){
-        $this->conex = new mysqli(
-            $this->host,
-            $this->user,
-            $this->password,
-            $this->dataBase
-        );
+    public function __construct() {
+        try {
+            $this->conn = new PDO(
+                "mysql:host=" . $this->host . ";dbname=" . $this->database,
+                $this->username,
+                $this->password
+            );
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $e) {
+            echo "Error de conexión: " . $e->getMessage();
+        }
     }
-    public function getConexion() {
-        return $this->conex;
+
+    public function getConnection() {
+        return $this->conn;
     }
 
     public function close(){
-        $this->conex->close();
+        $this->conn = null;
     }
 
     public function exeSQL($sql){
-        return $this->conex->query($sql);
+        return $this->conn->query($sql);
     }
-
-
 }
