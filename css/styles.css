@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,13 +18,13 @@ body {
     padding: 20px;
 }
 
-/* Encabezados */
+
 h1, h2, h3, h4 {
     color: #333;
     margin-bottom: 1rem;
 }
 
-/* Botones */
+
 .btn {
     display: inline-block;
     padding: 8px 16px;
@@ -67,7 +67,7 @@ h1, h2, h3, h4 {
     margin-right: 4px;
 }
 
-/* Tablas */
+
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -96,7 +96,7 @@ h1, h2, h3, h4 {
     white-space: nowrap;
 }
 
-/* Formularios */
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -115,7 +115,7 @@ h1, h2, h3, h4 {
     margin-bottom: 1rem;
 }
 
-/* Grid system simplificado */
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -132,14 +132,14 @@ h1, h2, h3, h4 {
     padding: 10px;
 }
 
-/* Utilidades */
+
 .text-center { text-align: center; }
 .text-end { text-align: right; }
 .mt-4 { margin-top: 2rem; }
 .mb-4 { margin-bottom: 2rem; }
 .mb-3 { margin-bottom: 1rem; }
 
-/* Alertas */
+
 .alert {
     padding: 12px;
     margin-bottom: 1rem;
@@ -152,7 +152,7 @@ h1, h2, h3, h4 {
     border: 1px solid #f5c6cb;
 }
 
-/* Tarjetas */
+
 .card {
     background-color: white;
     border-radius: 4px;
