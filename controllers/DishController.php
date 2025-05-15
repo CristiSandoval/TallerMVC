@@ -49,17 +49,17 @@ class DishController {
         }
     }
 
-    // Mostrar todos los platos
+   
     public function index() {
         $dishes = $this->dishModel->getAll();
-        // Si hay un mensaje de error en la sesión, lo recuperamos
+        
         $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
-        // Limpiamos el mensaje de error de la sesión
+       
         unset($_SESSION['error']);
         require_once 'views/dishes/index.php';
     }
 
-    // Mostrar formulario de edición
+    
     public function edit($id) {
         $dish = $this->dishModel->getById($id);
         if (!$dish) {
@@ -69,7 +69,7 @@ class DishController {
         require_once 'views/dishes/edit.php';
     }
 
-    // Procesar actualización
+    
     public function update() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
@@ -94,10 +94,10 @@ class DishController {
         }
     }
 
-    // Eliminar plato
+  
     public function delete($id) {
         if (!$this->dishModel->canBeDeleted($id)) {
-            // Guardamos el mensaje de error en la sesión
+            
             $_SESSION['error'] = "No se puede eliminar el plato porque está siendo usado en órdenes";
             header('Location: index.php?controller=dish&action=index');
             return;
