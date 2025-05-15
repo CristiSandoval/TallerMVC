@@ -14,7 +14,7 @@ class TableController {
         $this->tableModel = new Table($db);
     }
 
-    // Mostrar todas las mesas
+ 
     public function index() {
         $tables = $this->tableModel->getAll();
         $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
@@ -22,12 +22,12 @@ class TableController {
         require_once 'views/tables/index.php';
     }
 
-    // Mostrar formulario de creación
+   
     public function create() {
         require_once 'views/tables/create.php';
     }
 
-    // Procesar el formulario de creación
+ 
     public function store() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $this->tableModel->setName($_POST['name']);
@@ -41,7 +41,7 @@ class TableController {
         }
     }
 
-    // Mostrar formulario de edición
+    
     public function edit($id) {
         $table = $this->tableModel->getById($id);
         if (!$table) {
@@ -51,7 +51,7 @@ class TableController {
         require_once 'views/tables/edit.php';
     }
 
-    // Procesar actualización
+   
     public function update() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $this->tableModel->setId($_POST['id']);
@@ -67,7 +67,7 @@ class TableController {
         }
     }
 
-    // Eliminar mesa
+    
     public function delete($id) {
         if (!$this->tableModel->canBeDeleted($id)) {
             $_SESSION['error'] = "No se puede eliminar la mesa porque tiene órdenes asociadas";
