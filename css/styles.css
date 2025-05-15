@@ -169,7 +169,7 @@ h1, h2, h3, h4 {
     margin-bottom: 0.75rem;
 }
 
-/* Badges */
+
 .badge {
     padding: 4px 8px;
     border-radius: 4px;
@@ -185,7 +185,7 @@ h1, h2, h3, h4 {
     background-color: #dc3545;
 }
 
-/* Estilos específicos para la factura */
+
 .invoice-header {
     border-bottom: 2px solid #dee2e6;
     margin-bottom: 2rem;
@@ -206,7 +206,7 @@ h1, h2, h3, h4 {
     margin: 20px 0;
 }
 
-/* Media queries para responsividad */
+
 @media (max-width: 768px) {
     .col-6 {
         flex: 0 0 100%;
@@ -218,7 +218,7 @@ h1, h2, h3, h4 {
     }
 }
 
-/* Estilos para impresión */
+
 @media print {
     .no-print {
         display: none;
@@ -248,7 +248,7 @@ h1, h2, h3, h4 {
     display: none;
 }
 
-/* Estilos para los formularios */
+
 form div {
     margin-bottom: 10px;
 }
@@ -267,7 +267,7 @@ select {
     padding: 5px;
 }
 
-/* Estilos específicos para el formulario de órdenes */
+
 .order-item {
     margin-bottom: 15px;
     padding: 10px;
@@ -286,7 +286,7 @@ select {
     margin-top: 20px;
 }
 
-/* Estilos para el encabezado de listados */
+
 .header-actions {
     display: flex;
     justify-content: space-between;
@@ -298,19 +298,19 @@ select {
     margin: 0;
 }
 
-/* Estilos para los botones de acción en el encabezado */
+
 .action-buttons {
     display: flex;
     gap: 10px;
 }
 
-/* Ajustes para las tablas con múltiples acciones */
+
 .table td:last-child {
     white-space: nowrap;
     min-width: 200px;
 }
 
-/* Estilos para el contenedor de formularios */
+
 .form-container {
     max-width: 800px;
     margin: 0 auto;
@@ -320,7 +320,7 @@ select {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* Estilos para filas de formulario */
+
 .form-row {
     display: flex;
     gap: 20px;
@@ -331,13 +331,13 @@ select {
     flex: 1;
 }
 
-/* Ajustes para inputs de fecha */
+
 input[type="date"] {
     width: 200px;
     padding: 5px;
 }
 
-/* Estilos para reportes */
+
 .report-period {
     font-size: 1.2rem;
     color: #6c757d;
@@ -377,7 +377,7 @@ input[type="date"] {
     font-size: 0.9rem;
 }
 
-/* Menú de navegación principal */
+
 .main-nav {
     background-color: #f8f9fa;
     padding: 1rem;
@@ -397,7 +397,7 @@ input[type="date"] {
     color: white;
 }
 
-/* Responsive para el menú */
+
 @media (max-width: 768px) {
     .nav-buttons {
         flex-direction: column;
