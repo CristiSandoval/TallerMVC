@@ -46,7 +46,7 @@
                         <tr>
                             <td><?php echo htmlspecialchars($item['dish_name']); ?></td>
                             <td><?php echo htmlspecialchars($item['category_name']); ?></td>
-                            <td class="text-end">$<?php echo number_format($item['unit_price'], 2); ?></td>
+                            <td class="text-end">$<?php echo number_format($item['price'], 2); ?></td>
                             <td class="text-end"><?php echo $item['quantity']; ?></td>
                             <td class="text-end">$<?php echo number_format($item['quantity'] * $item['price'], 2); ?></td>
                         </tr>
