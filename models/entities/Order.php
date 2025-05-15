@@ -17,7 +17,7 @@ class Order {
         $this->db = $db;
     }
 
-    // Getters y setters
+    
     public function getId() { return $this->id; }
     public function getDateOrder() { return $this->dateOrder; }
     public function getTotal() { return $this->total; }

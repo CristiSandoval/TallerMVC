@@ -14,7 +14,7 @@ class Dish {
         $this->db = $db;
     }
 
-    // Getters y setters
+    
     public function getId() { return $this->id; }
     public function getDescription() { return $this->description; }
     public function getIdCategory() { return $this->idCategory; }

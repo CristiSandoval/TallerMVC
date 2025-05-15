@@ -38,12 +38,12 @@
     </div>
 
     <script>
-        // Establecer fecha actual como valor máximo
+        
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('start_date').max = today;
         document.getElementById('end_date').max = today;
 
-        // Establecer fecha inicial por defecto (1 mes atrás)
+       
         const lastMonth = new Date();
         lastMonth.setMonth(lastMonth.getMonth() - 1);
         document.getElementById('start_date').value = lastMonth.toISOString().split('T')[0];

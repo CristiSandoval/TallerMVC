@@ -80,12 +80,12 @@
             const orderTotalSpan = document.getElementById('orderTotal');
             const firstItem = orderDetails.querySelector('.order-item');
 
-            // Establecer la fecha actual por defecto
+           
             const now = new Date();
             now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
             document.getElementById('dateOrder').value = now.toISOString().slice(0, 16);
 
-            // Función para calcular el total
+          
             function calculateTotal() {
                 let total = 0;
                 const items = orderDetails.querySelectorAll('.order-item');
@@ -100,7 +100,7 @@
                 orderTotalSpan.textContent = total.toFixed(2);
             }
 
-            // Agregar evento para calcular total al cambiar cantidad o plato
+          
             orderDetails.addEventListener('change', function(e) {
                 if (e.target.classList.contains('dish-select') || 
                     e.target.classList.contains('quantity-input')) {
@@ -108,7 +108,7 @@
                 }
             });
 
-            // Función para agregar nuevo item
+           
             addItemButton.addEventListener('click', function() {
                 const newItem = firstItem.cloneNode(true);
                 newItem.querySelector('.dish-select').value = '';
@@ -117,14 +117,14 @@
                 orderDetails.appendChild(newItem);
             });
 
-            // Mostrar botón eliminar en items adicionales
+    
             document.querySelectorAll('.order-item').forEach((item, index) => {
                 if (index > 0) {
                     item.querySelector('.remove-item').classList.remove('hidden');
                 }
             });
 
-            // Eliminar items
+           
             orderDetails.addEventListener('click', function(e) {
                 if (e.target.classList.contains('remove-item')) {
                     if (orderDetails.querySelectorAll('.order-item').length > 1) {
