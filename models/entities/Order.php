@@ -80,9 +80,10 @@ class Order {
         $order = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($order) {
-            $sql = "SELECT od.*, d.description as dish_name 
+            $sql = "SELECT od.*, d.description as dish_name, c.name as category_name 
                     FROM order_details od 
                     JOIN dishes d ON od.idDish = d.id 
+                    JOIN categories c ON d.idCategory = c.id
                     WHERE od.idOrder = ?";
             $stmt = $this->db->prepare($sql);
             $stmt->execute([$id]);
