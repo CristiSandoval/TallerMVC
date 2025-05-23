@@ -64,10 +64,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-        <div class="button-group">
-            <a href="index.php?controller=home&action=index" class="btn btn-secondary">Volver al Menú Principal</a>
-        </div>
     </div>
 </body>
 </html> 

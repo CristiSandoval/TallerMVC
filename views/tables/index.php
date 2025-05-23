@@ -46,10 +46,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-        <div class="button-group">
-            <a href="index.php?controller=dish&action=index" class="btn btn-secondary">Volver a Platos</a>
-        </div>
     </div>
 </body>
 </html> 

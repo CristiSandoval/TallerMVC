@@ -8,15 +8,6 @@
 </head>
 <body>
     <div class="container">
-        <nav class="main-nav">
-            <div class="nav-buttons">
-                <a href="index.php?controller=dish&action=index" class="btn btn-primary">Platos</a>
-                <a href="index.php?controller=category&action=index" class="btn btn-info">Categorías</a>
-                <a href="index.php?controller=table&action=index" class="btn btn-warning">Mesas</a>
-                <a href="index.php?controller=order&action=index" class="btn btn-success">Órdenes</a>
-            </div>
-        </nav>
-
         <?php if (isset($error)): ?>
             <div class="error-message">
                 <?php echo htmlspecialchars($error); ?>
