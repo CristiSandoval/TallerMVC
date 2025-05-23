@@ -25,7 +25,10 @@
 
         <div class="header-actions">
             <h1>Lista de Categorías</h1>
-            <a href="index.php?controller=category&action=create" class="btn btn-primary">Nueva Categoría</a>
+            <div class="button-group">
+                <a href="index.php?controller=category&action=create" class="btn btn-primary">Nueva Categoría</a>
+                <a href="index.php?controller=home&action=index" class="btn btn-secondary">Volver al Menú Principal</a>
+            </div>
         </div>
 
         <table class="table table-striped">

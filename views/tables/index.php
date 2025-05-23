@@ -16,7 +16,10 @@
 
         <div class="header-actions">
             <h1>Lista de Mesas</h1>
-            <a href="index.php?controller=table&action=create" class="btn btn-primary">Nueva Mesa</a>
+            <div class="button-group">
+                <a href="index.php?controller=table&action=create" class="btn btn-primary">Nueva Mesa</a>
+                <a href="index.php?controller=home&action=index" class="btn btn-secondary">Volver al Menú Principal</a>
+            </div>
         </div>
 
         <table class="table table-striped">

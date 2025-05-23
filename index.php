@@ -1,17 +1,19 @@
 <?php
 session_start();
 
+require_once 'controllers/HomeController.php';
 require_once 'controllers/DishController.php';
 require_once 'controllers/CategoryController.php';
 require_once 'controllers/TableController.php';
 require_once 'controllers/OrderController.php';
 
-
-$controller = isset($_GET['controller']) ? $_GET['controller'] : 'dish';
+$controller = isset($_GET['controller']) ? $_GET['controller'] : 'home';
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
 
-
 switch ($controller) {
+    case 'home':
+        $controller = new HomeController();
+        break;
     case 'dish':
         $controller = new DishController();
         break;
@@ -25,21 +27,17 @@ switch ($controller) {
         $controller = new OrderController();
         break;
     default:
-       
-        header('Location: index.php?controller=dish&action=index');
+        header('Location: index.php?controller=home&action=index');
         exit();
 }
 
-
 if (method_exists($controller, $action)) {
-   
     if (isset($_GET['id'])) {
         $controller->$action($_GET['id']);
     } else {
         $controller->$action();
     }
 } else {
-    
-    header('Location: index.php?controller=dish&action=index');
+    header('Location: index.php?controller=home&action=index');
     exit();
 }

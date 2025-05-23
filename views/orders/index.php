@@ -16,10 +16,11 @@
 
         <div class="header-actions">
             <h1>Lista de Órdenes</h1>
-            <div class="action-buttons">
+            <div class="button-group">
                 <a href="index.php?controller=order&action=reportForm" class="btn btn-info">Reporte de Órdenes</a>
                 <a href="index.php?controller=order&action=cancelledReportForm" class="btn btn-warning">Reporte de Anuladas</a>
                 <a href="index.php?controller=order&action=create" class="btn btn-primary">Nueva Orden</a>
+                <a href="index.php?controller=home&action=index" class="btn btn-secondary">Volver al Menú Principal</a>
             </div>
         </div>
 
@@ -65,7 +66,7 @@
         </table>
 
         <div class="button-group">
-            <a href="index.php?controller=dish&action=index" class="btn btn-secondary">Volver a Platos</a>
+            <a href="index.php?controller=home&action=index" class="btn btn-secondary">Volver al Menú Principal</a>
         </div>
     </div>
 </body>

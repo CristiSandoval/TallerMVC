@@ -31,14 +31,14 @@
 
                 <div class="button-group">
                     <button type="submit" class="btn btn-primary">Generar Reporte</button>
-                    <button type="button" class="btn btn-secondary" onclick="window.location='index.php?controller=order&action=index'">Volver</button>
+                    <a href="index.php?controller=home&action=index" class="btn btn-secondary">Volver al Menú Principal</a>
+                    <a href="index.php?controller=order&action=index" class="btn btn-info">Volver a Órdenes</a>
                 </div>
             </form>
         </div>
     </div>
 
     <script>
-        
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('start_date').max = today;
         document.getElementById('end_date').max = today;

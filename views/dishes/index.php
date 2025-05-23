@@ -25,8 +25,9 @@
 
         <div class="header-actions">
             <h1>Lista de Platos</h1>
-            <div class="action-buttons">
+            <div class="button-group">
                 <a href="index.php?controller=dish&action=create" class="btn btn-primary">Nuevo Plato</a>
+                <a href="index.php?controller=home&action=index" class="btn btn-secondary">Volver al Menú Principal</a>
             </div>
         </div>
 
